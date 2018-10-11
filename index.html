@@ -71,10 +71,10 @@
 <script>
 	axios.get('https://raw.githubusercontent.com/brianardiles/FlowCast/master/package.json')
 		.then(function (response) {
-			document.getElementById('downloadWindows').href = "https://github.com/brianardiles/FlowCast/releases/download/v1.0.3/FlowCast-Setup-" + response.data.version + ".exe";
+			document.getElementById('downloadWindows').href = "https://github.com/brianardiles/FlowCast/releases/download/" + response.data.version + "/FlowCast-Setup-" + response.data.version + ".exe";
 			document.getElementById('downloadWindows').innerHTML = "Download Flow Cast " + response.data.version + " (Windows)";
 
-			document.getElementById('downloadMac').href = "https://github.com/brianardiles/FlowCast/releases/download/v1.0.3/FlowCast-Setup-" + response.data.version + ".dmg";
+			document.getElementById('downloadMac').href = "https://github.com/brianardiles/FlowCast/releases/download/" + response.data.version + "/FlowCast-Setup-" + response.data.version + ".dmg";
 			document.getElementById('downloadMac').innerHTML = "Download Flow Cast " + response.data.version + " (OSX)";
 		})
 		.catch(function (error) {
